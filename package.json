@@ -19,6 +19,11 @@
         "category": "Line Filter"
       },
       {
+        "command": "vscode-line-filter.filterAndWatchActiveEditor",
+        "title": "Filter and Watch Active Editor",
+        "category": "Line Filter"
+      },
+      {
         "command": "vscode-line-filter.filterActiveEditorInPlace",
         "title": "Filter Active Editor In Place",
         "category": "Line Filter"
