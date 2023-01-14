@@ -15,9 +15,44 @@
     "commands": [
       {
         "command": "vscode-line-filter.filterActiveEditor",
-        "title": "Filter Active Editor"
+        "title": "Filter Active Editor",
+        "category": "Line Filter"
+      },
+      {
+        "command": "vscode-line-filter.filterActiveEditorInPlace",
+        "title": "Filter Active Editor In Place",
+        "category": "Line Filter"
       }
-    ]
+    ],
+    "configuration": {
+      "properties": {
+        "lineFilter.patterns": {
+          "type": "object",
+          "examples": [
+            {
+              "name": { "includes": ["includeThisSubstring"], "excludes": ["excludeThisOne"] }
+            }
+          ],
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "includes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "excludes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
