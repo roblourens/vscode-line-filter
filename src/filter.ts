@@ -56,6 +56,13 @@ export async function doFilterAndWatch(): Promise<void> {
             }
         }
     });
+
+    const closeDocListener = vscode.workspace.onDidCloseTextDocument(e => {
+        if (e.uri.toString() === newDoc.uri.toString()) {
+            listener.dispose();
+            closeDocListener.dispose();
+        }
+    });
 }
 
 function applyConfigToLines(lines: string[], config: IFilterConfiguration): string[] {
