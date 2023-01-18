@@ -1,6 +1,6 @@
 # Line Filter
 
-// TODO- fill this out with screen recordings
+![demo of "Filter Active Editor" command](./media/demo.gif)
 
 ## Usage
 
@@ -18,8 +18,10 @@
 - Focus the editor you'd like to focus. This can be an output channel as well.
 - Run one of these commands:
     - "Filter Active Editor"
-    - "Filter and Watch Active Editor"
     - "Filter Active Editor In Place"
+    - "Filter and Watch Active Editor"
+        - Only supported for output channels for now
+        - It will only be watched as long as the output channel is visible. The TextDocument is disposed when the output channel is closed, so there is nothing for us to watch.
 
 
 ## Future work
