@@ -1,5 +1,6 @@
 {
   "name": "vscode-line-filter",
+  "publisher": "roblourens",
   "displayName": "Line Filter",
   "description": "An extension for filtering the lines of a log file in an editor with configurable include/exclude patterns",
   "version": "0.0.1",
