@@ -58,7 +58,11 @@ export async function doFilterAndWatch(): Promise<void> {
     });
 
     const closeDocListener = vscode.workspace.onDidCloseTextDocument(e => {
-        if (e.uri.toString() === newDoc.uri.toString()) {
+        if (e.uri.toString() === newDoc.uri.toString() || e.uri.toString() === doc.uri.toString()) {
+            if (e.uri.toString() === doc.uri.toString()) {
+                vscode.window.showWarningMessage('The watched document has been closed- stopping watch');
+            }
+
             listener.dispose();
             closeDocListener.dispose();
         }
