@@ -11,6 +11,14 @@
   ],
   "activationEvents": [ ],
   "main": "./out/extension.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/roblourens/vscode-line-filter.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/microsoft/vscode-wordcount/issues"
+  },
   "contributes": {
     "commands": [
       {
