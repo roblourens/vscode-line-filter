@@ -3,14 +3,14 @@
   "publisher": "roblourens",
   "displayName": "Line Filter",
   "description": "An extension for filtering the lines of a log file in an editor with configurable include/exclude patterns",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.74.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [ ],
+  "activationEvents": [],
   "main": "./out/extension.js",
   "repository": {
     "type": "git",
@@ -44,7 +44,14 @@
           "type": "object",
           "examples": [
             {
-              "name": { "includes": ["includeThisSubstring"], "excludes": ["excludeThisOne"] }
+              "name": {
+                "includes": [
+                  "includeThisSubstring"
+                ],
+                "excludes": [
+                  "excludeThisOne"
+                ]
+              }
             }
           ],
           "additionalProperties": {
